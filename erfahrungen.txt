@@ -1,0 +1,60 @@
+Das war ein Haufen Arbeit.
+Dennoch sehr lohnenswert. Ich saß viel an meinem Projekt manchmal hat es echt
+sehr viel Spaß gemacht, dann war es mal aber auch eher frustrierend. Mit meinem
+Ergebnis bin ich recht zufrieden, es könnte aber auch besser sein.
+Direkt mal zu den Details:
+
+- Das Programm: Sehr simpel zu bedienen. Kann normal über die Kommandozeile
+  gestartet werden (/bin/Cortado). Default is DRAW, es kann über die Taste 't'
+  (für 'toggle' oder 'tool') zu SELECT umgeschalten werden. 'q' beendet das
+  Programm. Mit 'z' werden chronologisch die zuletzt gezeichneten lines
+  gelöscht. Das select tool wählt beliebig viele lines aus und ermöglicht eine
+  Verschiebung dieser über den gesamten screen.
+
+
+- Probleme: Größtes Problem war eindeutig die prähistorische 'GraphicsGems' C-Library
+  mit K&R function definitons (diese habe ich für das Lösen des
+  Nearest-Point-Problems benötigt und wurde auch in der erwähnten Masterarbeit
+  verwendet). Im Nachhinein hätte ich mir da wohl lieber
+  was anderes suchen sollen. Schwierig und aufwendig war auch die
+  Auseinadersetzung mit einer Masterarbeit über das Approximieren von
+  Datenpunkten durch Bezier Kurven, die außerdem uralten MATLAB code
+  enthielt. Sehr angenehm waren dagegen die Bibliotheken eigen und nlopt.
+
+  Schwierig wurde mit der Zeit auch die Struktur des Programms. Die erwähnten
+  Bibliotheken sowie auch die kleine Bibliothek SplineSuite, die ich im Zuge
+  dieses Programms erstellt habe haben es nicht einfacher gemacht, die
+  dependencies zu managen und das programm zu builden. Mir wurde klar, dass ich
+  eine neue Makefile brauche und dabei auch schmerzlichst bewusst, dass es bei
+  make für mich noch etwas Nachholbedarf gibt - immerhin funktioniert es.
+  Teilweise war es echt nicht leicht, die Ordnung und den Überblick zu behalten.
+  Zugegeben sind manche Teile auch nicht ganz so schön strukturiert wie andere
+  (habe aber schon nochmal etwas Zeit verwendet, um wenigstens ein bisschen
+  'aufzuräumen'.
+
+
+- Ergebnis: Das Zeichnen funktioniert teilweise gut, teilweise nicht gut. Ab und
+  zu kommt es vor, dass kleine Artefakte wie Schleifen (wo eigentlich Ecken sein
+  sollten) oder auch mal sehr große auftreten. Letzteres konnte ich mir noch
+  nicht wirklich erklären. Dennoch finde ich das Ergebnis durchaus
+  zufriedenstellend. Sofern man langsam und mit geschwungener Schrift schreibt,
+  sind die Resultate teilweise echt beeindruckend.
+  Mit dem Auswahlwerkzeug bin ich sehr zufrieden. Ich finde, dass das auswählen
+  und markieren echt sehr gut klappt.
+
+- Shortcomings: Tests konnte ich nicht mehr einbinden. Die Tests aus Blatt 11
+  hätte ich hinzufügen können, hielte ich aber nicht für notwendig, da diese ja
+  ohnehin schon gut durchgelaufen sind. Auf weitere Unit-Tests habe ich
+  verzichtet, da bei den ganzen komplexen Optimierungsalgorithmen
+  Tests-Schreiben gar nicht so einfach ist. Im Nachhinein hätte es hier und da
+  aber doch ganz gut getan. Die Argumentübergabe ist teilweise nicht sehr
+  effizient gestaltet. Ich vermute, dass an einigen Stellen unnötige Kopien
+  gemacht werden. Um das zu verifizieren, geschweige denn zu korrigieren, reicht
+  die Zeit nun einfach nicht. Ist ja auch ganz schön zu wissen, dass dein
+  Programm 'theoretisch' noch schneller sein könnte...
+  Übrigens: 'Eigen' ist für einige warnings beim kompilieren verantwortlich.
+  Scheinbar lässt sich dagegen nicht viel machen. Bisher hat es aber auch noch
+  keine Probleme bereitet.
+
+Alles in allem ein sehr schönes Projekt, das mir gut gefallen hat und bei dem
+ich viel über C++, Computergrafik und vor allem Mathe lernen konnte.
